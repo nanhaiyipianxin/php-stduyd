@@ -1,0 +1,17 @@
+$nums=array(10,54,64,500,1);		//外层作用就是多层循环，确保所有数都被排列，并且减少比对
+function paixu($nums)
+{	$co=count($nums);	
+	for($x=0;$x<=$co-1;$x++)
+		{
+			for($z=0;$z<=($co-1)-$x;$z++)
+			{
+				if($nums[$z]>$nums[$z+1])
+				{
+				$temp=$nums[$z];
+				$nums[$z]=$nums[$z+1];
+				$nums[$z+1]=$temp;
+				}
+			}
+		}
+	var_dump($nums);}
+paixu($nums);
